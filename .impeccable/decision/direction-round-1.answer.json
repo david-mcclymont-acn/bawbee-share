@@ -1,0 +1,9 @@
+{
+  "seedKey": "eeb5510c",
+  "scope": "direction",
+  "mode": "operate",
+  "assignedIndex": 4,
+  "assigned": "Landranger Sheet",
+  "answer": { "optionId": "model-pick", "label": "Scottish Banknote", "steer": "", "buildPath": "code" },
+  "answeredBy": "Person 1, via the decision page, 2026-10-15"
+}

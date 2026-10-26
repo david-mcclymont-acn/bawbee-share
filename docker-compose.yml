@@ -1,0 +1,40 @@
+name: bawbee
+
+x-bawbee: &bawbee
+  image: bawbee:latest
+  build: .
+  restart: unless-stopped
+  env_file:
+    - path: .env
+      required: false
+  volumes:
+    - bawbee-data:/data
+    # Bank secrets (the encryption key, the Enable Banking .pem): files in ./secrets on the
+    # host, never in the image or git. See docs/providers.md.
+    - ./secrets:/run/bawbee-secrets:ro
+
+services:
+  bawbee-app:
+    <<: *bawbee
+    container_name: bawbee-app
+    # Loopback by default; nginx on the host proxies HTTPS to it. Set BAWBEE_BIND to an
+    # internal address if nginx runs on another VM.
+    ports:
+      - "${BAWBEE_BIND:-127.0.0.1}:${BAWBEE_PORT:-8000}:8000"
+
+  bawbee-worker:
+    <<: *bawbee
+    container_name: bawbee-worker
+    command: ["python", "-m", "app.worker"]
+    healthcheck:
+      test: ["CMD", "python", "-m", "app.worker", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    depends_on:
+      bawbee-app:
+        condition: service_healthy
+
+volumes:
+  bawbee-data:

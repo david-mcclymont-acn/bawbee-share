@@ -1,0 +1,98 @@
+{
+  "children": [
+    "Child 1",
+    "Child 2"
+  ],
+  "patterns": [
+    {
+      "days": 2,
+      "hours": 18
+    },
+    {
+      "days": 3,
+      "hours": 27
+    },
+    {
+      "days": 4,
+      "hours": 36
+    },
+    {
+      "days": 5,
+      "hours": 36
+    }
+  ],
+  "nurseries": [
+    {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+        {
+          "rate": 60,
+          "disc": 0,
+          "min": 0
+        },
+        {
+          "rate": 60,
+          "disc": 10,
+          "min": 0
+        }
+      ]
+    },
+    {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+        {
+          "rate": 79,
+          "disc": 0,
+          "min": 0
+        },
+        {
+          "rate": 79,
+          "disc": 10,
+          "min": 4
+        }
+      ]
+    },
+    {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+        {
+          "rate": 66,
+          "disc": 0,
+          "min": 0
+        },
+        {
+          "rate": 66,
+          "disc": 0,
+          "min": 0
+        }
+      ]
+    }
+  ],
+  "fields": {
+    "i-salary": "52000",
+    "i-refhours": "36",
+    "i-refdays": "4",
+    "i-bank": "8",
+    "i-leave": "27.5",
+    "i-actual": "2976.79",
+    "i-partner": "88000",
+    "i-cb1": "27.05",
+    "i-cb2": "17.90",
+    "i-tfc": "2000",
+    "i-tfcrate": "20",
+    "i-usecb": true,
+    "i-taxcode": "S1257L",
+    "i-nilo": "12570",
+    "i-nihi": "50270",
+    "i-npa": true
+  }
+}

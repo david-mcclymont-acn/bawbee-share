@@ -1,0 +1,59 @@
+# Secrets and keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Runtime data, databases and backups (anchored so tool folders named data/ still commit)
+/data/
+/backend/data/
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-*
+backups/
+
+# Real bank exports (never commit)
+imports/
+*.csv
+!backend/tests/fixtures/**/*.csv
+
+# Childcare app runtime data (state.json in reference/ IS committed)
+reference/childcare-app/data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+frontend/test-results/
+frontend/playwright-report/
+frontend/screenshots/
+
+# Claude Code / Impeccable: per-machine settings, the platform engine binary (the launcher
+# downloads it on first run) and session scratch
+.claude/settings.local.json
+.claude/skills/impeccable/scripts/bin/
+.impeccable/questions/
+.impeccable/review/
+.impeccable/*.png
+.impeccable/config.local.json
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Written by the Docker build (app/build.py); a stale local copy would misreport the commit.
+backend/build.json

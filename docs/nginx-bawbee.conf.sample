@@ -1,0 +1,24 @@
+# Sample server block for the existing nginx reverse proxy.
+# The app does its own login (Phase 2): local accounts by default, plus optional OIDC against
+# authentik. authentik forward auth at nginx is an optional second layer and is never required.
+
+server {
+    listen 443 ssl;
+    http2 on;
+    server_name bawbee.<my-domain>;
+
+    ssl_certificate     /etc/nginx/certs/bawbee.<my-domain>.crt;
+    ssl_certificate_key /etc/nginx/certs/bawbee.<my-domain>.key;
+
+    client_max_body_size 20m;  # CSV imports
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;  # BAWBEE_BIND:BAWBEE_PORT on the app VM
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 60s;
+    }
+}

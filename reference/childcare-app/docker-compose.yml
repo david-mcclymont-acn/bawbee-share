@@ -1,0 +1,9 @@
+services:
+  childcare:
+    build: .
+    container_name: childcare-calculator
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8099:8080"   # bind to loopback; nginx fronts it
+    volumes:
+      - ./data:/data            # state.json lives here - back this up

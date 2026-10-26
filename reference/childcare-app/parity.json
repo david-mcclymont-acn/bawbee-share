@@ -1,0 +1,6277 @@
+{
+ "generated_by": "scripts/childcare-golden.mjs",
+ "cases": [
+  {
+   "name": "saved state",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2976.7883333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 11745.509999999997,
+     "monthly": 978.7924999999997
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 15044.759999999998,
+     "monthly": 1253.7299999999998
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 16739.059999999998,
+     "monthly": 1394.9216666666664
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 10993.46,
+     "monthly": 916.1216666666666
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 9935.349999999999,
+     "monthly": 827.9458333333332
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 12203.349999999999,
+     "monthly": 1016.9458333333332
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 13589.05,
+     "monthly": 1132.4208333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 7055.947499999995,
+     "monthly": 587.9956249999996
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 10293.989999999998,
+     "monthly": 857.8324999999999
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 12867.48,
+     "monthly": 1072.29
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 13110.259999999998,
+     "monthly": 1092.5216666666665
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 6457.459999999999,
+     "monthly": 538.1216666666666
+    }
+   ]
+  },
+  {
+   "name": "no net pay arrangement",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": false
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2772.9483333333333,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2655.9300000000003,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2118.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20605.67,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 11412.709999999997,
+     "monthly": 951.0591666666664
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 5370.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 2415
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28121.67,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 14332.23,
+     "monthly": 1194.3525
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 14292.979999999996,
+     "monthly": 1191.0816666666663
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 8547.379999999997,
+     "monthly": 712.2816666666664
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2655.9300000000003,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2118.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20605.67,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 9602.55,
+     "monthly": 800.2125
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 5370.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 2415
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28121.67,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 11490.82,
+     "monthly": 957.5683333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 11142.969999999998,
+     "monthly": 928.5808333333331
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 4609.867499999993,
+     "monthly": 384.1556249999994
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2655.9300000000003,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2118.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20605.67,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 9961.189999999999,
+     "monthly": 830.0991666666665
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 5370.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 2415
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28121.67,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 12154.95,
+     "monthly": 1012.9125
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 10664.179999999997,
+     "monthly": 888.6816666666664
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 9850.02,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 3498.18
+      }
+     ],
+     "ni": 3050.6,
+     "net": 33275.38,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 4011.3799999999974,
+     "monthly": 334.28166666666647
+    }
+   ]
+  },
+  {
+   "name": "partner part clawed back",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "70000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2976.7883333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 12914.209999999997,
+     "monthly": 1076.1841666666664
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 16213.46,
+     "monthly": 1351.1216666666667
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 17907.759999999995,
+     "monthly": 1492.3133333333328
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 12162.159999999996,
+     "monthly": 1013.513333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 11104.05,
+     "monthly": 925.3375
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 13372.05,
+     "monthly": 1114.3374999999999
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 14757.749999999996,
+     "monthly": 1229.8124999999998
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 8224.647499999992,
+     "monthly": 685.387291666666
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 11462.689999999999,
+     "monthly": 955.2241666666665
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 14036.18,
+     "monthly": 1169.6816666666666
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 14278.959999999995,
+     "monthly": 1189.913333333333
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 1168.7,
+     "clawback": 50,
+     "annual": 7626.159999999996,
+     "monthly": 635.513333333333
+    }
+   ]
+  },
+  {
+   "name": "partner below the charge",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "50000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2976.7883333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 14082.909999999998,
+     "monthly": 1173.575833333333
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 17382.16,
+     "monthly": 1448.5133333333333
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 19076.46,
+     "monthly": 1589.705
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 13330.86,
+     "monthly": 1110.905
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 12272.75,
+     "monthly": 1022.7291666666666
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 14540.75,
+     "monthly": 1211.7291666666667
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 15926.45,
+     "monthly": 1327.2041666666667
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 9393.347499999996,
+     "monthly": 782.778958333333
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 12631.39,
+     "monthly": 1052.6158333333333
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 15204.880000000001,
+     "monthly": 1267.0733333333335
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 15447.66,
+     "monthly": 1287.305
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 2337.4,
+     "clawback": 0,
+     "annual": 8794.86,
+     "monthly": 732.9050000000001
+    }
+   ]
+  },
+  {
+   "name": "no child benefit",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": false,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2976.7883333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 11745.509999999997,
+     "monthly": 978.7924999999997
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 15044.759999999998,
+     "monthly": 1253.7299999999998
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 16739.059999999998,
+     "monthly": 1394.9216666666664
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 10993.46,
+     "monthly": 916.1216666666666
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 9935.349999999999,
+     "monthly": 827.9458333333332
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 12203.349999999999,
+     "monthly": 1016.9458333333332
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 13589.05,
+     "monthly": 1132.4208333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 7055.947499999995,
+     "monthly": 587.9956249999996
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 10293.989999999998,
+     "monthly": 857.8324999999999
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 12867.48,
+     "monthly": 1072.29
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 13110.259999999998,
+     "monthly": 1092.5216666666665
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 0,
+     "cb_net": 0,
+     "clawback": 0,
+     "annual": 6457.459999999999,
+     "monthly": 538.1216666666666
+    }
+   ]
+  },
+  {
+   "name": "allowance tapered",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "130000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 5751.158333333333,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 65000,
+     "pension_rate": 11.6,
+     "pension": 7540,
+     "tax": 12143.220000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 5791.38
+      }
+     ],
+     "ni": 3310.6,
+     "net": 42006.18,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 32813.22,
+     "monthly": 2734.435
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 97500,
+     "pension_rate": 12.7,
+     "pension": 12382.5,
+     "tax": 24062.625,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 4548.825
+      }
+     ],
+     "ni": 3960.6,
+     "net": 57094.275,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 43304.83500000001,
+     "monthly": 3608.7362500000004
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 50031.49999999999,
+     "monthly": 4169.291666666666
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 44285.899999999994,
+     "monthly": 3690.4916666666663
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 65000,
+     "pension_rate": 11.6,
+     "pension": 7540,
+     "tax": 12143.220000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 5791.38
+      }
+     ],
+     "ni": 3310.6,
+     "net": 42006.18,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 31003.06,
+     "monthly": 2583.5883333333336
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 97500,
+     "pension_rate": 12.7,
+     "pension": 12382.5,
+     "tax": 24062.625,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 4548.825
+      }
+     ],
+     "ni": 3960.6,
+     "net": 57094.275,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 40463.425,
+     "monthly": 3371.9520833333336
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 46881.48999999999,
+     "monthly": 3906.7908333333326
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 40348.38749999999,
+     "monthly": 3362.365624999999
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 65000,
+     "pension_rate": 11.6,
+     "pension": 7540,
+     "tax": 12143.220000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 5791.38
+      }
+     ],
+     "ni": 3310.6,
+     "net": 42006.18,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 31361.7,
+     "monthly": 2613.475
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 97500,
+     "pension_rate": 12.7,
+     "pension": 12382.5,
+     "tax": 24062.625,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 4548.825
+      }
+     ],
+     "ni": 3960.6,
+     "net": 57094.275,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 41127.55500000001,
+     "monthly": 3427.296250000001
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 46402.7,
+     "monthly": 3866.8916666666664
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 130000,
+     "pension_rate": 12.7,
+     "pension": 16510,
+     "tax": 39865.5,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 13161.96
+      },
+      {
+       "label": "Advanced",
+       "rate": 45,
+       "amount": 20351.7
+      }
+     ],
+     "ni": 4610.6,
+     "net": 69013.9,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 39749.899999999994,
+     "monthly": 3312.4916666666663
+    }
+   ]
+  },
+  {
+   "name": "default tax code",
+   "inputs": {
+    "children": [
+     "Child 1",
+     "Child 2"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     }
+    ],
+    "nurseries": [
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Little Acorns",
+      "rates": [
+       {
+        "rate": 60,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 60,
+        "disc": 10,
+        "min": 0
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": false,
+      "name": "Meadow House",
+      "rates": [
+       {
+        "rate": 79,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 79,
+        "disc": 10,
+        "min": 4
+       }
+      ]
+     },
+     {
+      "tfc": true,
+      "basis": "day",
+      "billsLeave": true,
+      "name": "Sunny Days",
+      "rates": [
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 66,
+        "disc": 0,
+        "min": 0
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12570,
+   "payslip_monthly": 2976.4733333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2324.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1787.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20936.67,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 11491.2,
+     "tfc": 2298.2400000000002,
+     "childcare_net": 9192.960000000001,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 6048,
+       "tfc": 1209.6000000000001
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 5443.2,
+       "tfc": 1088.64
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 11743.709999999997,
+     "monthly": 978.6424999999998
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4660.29,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1704.36
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28832.309999999998,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 17236.8,
+     "tfc": 3447.36,
+     "childcare_net": 13789.439999999999,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 9072,
+       "tfc": 1814.4
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 8164.799999999999,
+       "tfc": 1632.96
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 15042.869999999999,
+     "monthly": 1253.5725
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 22982.4,
+     "tfc": 4000,
+     "childcare_net": 18982.4,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 12096,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 10886.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 16735.28,
+     "monthly": 1394.6066666666666
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 28728,
+     "tfc": 4000,
+     "childcare_net": 24728,
+     "lines": [
+      {
+       "eff": 60,
+       "per_day": 60,
+       "applied": false,
+       "cost": 15120,
+       "tfc": 2000
+      },
+      {
+       "eff": 54,
+       "per_day": 54,
+       "applied": true,
+       "cost": 13608,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 10989.68,
+     "monthly": 915.8066666666667
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2324.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1787.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20936.67,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13753.9,
+     "tfc": 2750.78,
+     "childcare_net": 11003.119999999999,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 6876.95,
+       "tfc": 1375.39
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 9933.55,
+     "monthly": 827.7958333333332
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4660.29,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1704.36
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28832.309999999998,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 20630.85,
+     "tfc": 4000,
+     "childcare_net": 16630.85,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      },
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 10315.425,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 12201.46,
+     "monthly": 1016.7883333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26132.41,
+     "tfc": 4000,
+     "childcare_net": 22132.41,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 13753.9,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 12378.51,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 13585.27,
+     "monthly": 1132.1058333333333
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 32665.512500000004,
+     "tfc": 4000,
+     "childcare_net": 28665.512500000004,
+     "lines": [
+      {
+       "eff": 79,
+       "per_day": 79,
+       "applied": false,
+       "cost": 17192.375,
+       "tfc": 2000
+      },
+      {
+       "eff": 71.10000000000001,
+       "per_day": 71.10000000000001,
+       "applied": true,
+       "cost": 15473.137500000003,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 7052.167499999996,
+     "monthly": 587.6806249999996
+    },
+    {
+     "nursery": 2,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2324.93,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1787.8
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20936.67,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 13305.6,
+     "tfc": 2661.1200000000003,
+     "childcare_net": 10644.48,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 6652.8,
+       "tfc": 1330.5600000000002
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 10292.189999999999,
+     "monthly": 857.6824999999999
+    },
+    {
+     "nursery": 2,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4660.29,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1704.36
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28832.309999999998,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 19958.399999999998,
+     "tfc": 3991.68,
+     "childcare_net": 15966.719999999998,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 9979.199999999999,
+       "tfc": 1995.84
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 12865.59,
+     "monthly": 1072.1325
+    },
+    {
+     "nursery": 2,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 26611.2,
+     "tfc": 4000,
+     "childcare_net": 22611.2,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 13305.6,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 13106.48,
+     "monthly": 1092.2066666666667
+    },
+    {
+     "nursery": 2,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7407.72,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1055.88
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35717.68,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 33264,
+     "tfc": 4000,
+     "childcare_net": 29264,
+     "lines": [
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      },
+      {
+       "eff": 66,
+       "per_day": 66,
+       "applied": false,
+       "cost": 16632,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 2337.4,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 6453.68,
+     "monthly": 537.8066666666667
+    }
+   ]
+  },
+  {
+   "name": "hourly nursery, no TFC, three children",
+   "inputs": {
+    "children": [
+     "One",
+     "Two",
+     "Three"
+    ],
+    "patterns": [
+     {
+      "days": 2,
+      "hours": 18
+     },
+     {
+      "days": 3,
+      "hours": 27
+     },
+     {
+      "days": 4,
+      "hours": 36
+     },
+     {
+      "days": 5,
+      "hours": 36
+     },
+     {
+      "days": 2.5,
+      "hours": 20
+     }
+    ],
+    "nurseries": [
+     {
+      "name": "Hourly",
+      "basis": "hour",
+      "tfc": false,
+      "billsLeave": false,
+      "rates": [
+       {
+        "rate": 8.5,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 9,
+        "disc": 5,
+        "min": 3
+       },
+       {
+        "rate": 9,
+        "disc": 10,
+        "min": 5
+       }
+      ]
+     },
+     {
+      "name": "Daily",
+      "basis": "day",
+      "tfc": true,
+      "billsLeave": true,
+      "rates": [
+       {
+        "rate": 95,
+        "disc": 0,
+        "min": 0
+       },
+       {
+        "rate": 95,
+        "disc": 15,
+        "min": 2
+       },
+       {
+        "rate": 95,
+        "disc": 15,
+        "min": 2
+       }
+      ]
+     }
+    ],
+    "fields": {
+     "i-salary": "52000",
+     "i-refhours": "36",
+     "i-refdays": "4",
+     "i-bank": "8",
+     "i-leave": "27.5",
+     "i-actual": "2976.79",
+     "i-partner": "88000",
+     "i-cb1": "27.05",
+     "i-cb2": "17.90",
+     "i-tfc": "2000",
+     "i-tfcrate": "20",
+     "i-usecb": true,
+     "i-taxcode": "S1257L",
+     "i-nilo": "12570",
+     "i-nihi": "50270",
+     "i-npa": true
+    }
+   },
+   "personal_allowance": 12579,
+   "payslip_monthly": 2976.7883333333334,
+   "results": [
+    {
+     "nursery": 0,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 87.05,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 20761.425,
+     "tfc": 0,
+     "childcare_net": 20761.425,
+     "lines": [
+      {
+       "eff": 8.5,
+       "per_day": 76.5,
+       "applied": false,
+       "cost": 6659.325,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 81,
+       "applied": false,
+       "cost": 7051.05,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 81,
+       "applied": false,
+       "cost": 7051.05,
+       "tfc": 0
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 177.04499999999825,
+     "monthly": 14.753749999999854
+    },
+    {
+     "nursery": 0,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 130.575,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 30613.308749999997,
+     "tfc": 0,
+     "childcare_net": 30613.308749999997,
+     "lines": [
+      {
+       "eff": 8.5,
+       "per_day": 76.5,
+       "applied": false,
+       "cost": 9988.9875,
+       "tfc": 0
+      },
+      {
+       "eff": 8.549999999999999,
+       "per_day": 76.94999999999999,
+       "applied": true,
+       "cost": 10047.746249999998,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 81,
+       "applied": false,
+       "cost": 10576.574999999999,
+       "tfc": 0
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -1779.1087499999994,
+     "monthly": -148.25906249999994
+    },
+    {
+     "nursery": 0,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 174.1,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 40817.744999999995,
+     "tfc": 0,
+     "childcare_net": 40817.744999999995,
+     "lines": [
+      {
+       "eff": 8.5,
+       "per_day": 76.5,
+       "applied": false,
+       "cost": 13318.65,
+       "tfc": 0
+      },
+      {
+       "eff": 8.549999999999999,
+       "per_day": 76.94999999999999,
+       "applied": true,
+       "cost": 13396.994999999997,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 81,
+       "applied": false,
+       "cost": 14102.1,
+       "tfc": 0
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -5096.284999999996,
+     "monthly": -424.69041666666635
+    },
+    {
+     "nursery": 0,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 217.625,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 39407.535,
+     "tfc": 0,
+     "childcare_net": 39407.535,
+     "lines": [
+      {
+       "eff": 8.5,
+       "per_day": 61.2,
+       "applied": false,
+       "cost": 13318.650000000001,
+       "tfc": 0
+      },
+      {
+       "eff": 8.549999999999999,
+       "per_day": 61.559999999999995,
+       "applied": true,
+       "cost": 13396.994999999999,
+       "tfc": 0
+      },
+      {
+       "eff": 8.1,
+       "per_day": 58.32,
+       "applied": true,
+       "cost": 12691.89,
+       "tfc": 0
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -3686.0750000000044,
+     "monthly": -307.17291666666705
+    },
+    {
+     "nursery": 0,
+     "pattern": 4,
+     "gross": 28888.88888888889,
+     "pension_rate": 7,
+     "pension": 2022.2222222222224,
+     "tax": 2829.263333333334,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2292.1333333333337
+      }
+     ],
+     "ni": 1305.5111111111112,
+     "net": 22731.892222222225,
+     "days": 108.8125,
+     "attended": 108.8125,
+     "leave": 17.1875,
+     "bank": 4,
+     "cost": 23068.25,
+     "tfc": 0,
+     "childcare_net": 23068.25,
+     "lines": [
+      {
+       "eff": 8.5,
+       "per_day": 68,
+       "applied": false,
+       "cost": 7399.25,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 72,
+       "applied": false,
+       "cost": 7834.5,
+       "tfc": 0
+      },
+      {
+       "eff": 9,
+       "per_day": 72,
+       "applied": false,
+       "cost": 7834.5,
+       "tfc": 0
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -336.3577777777755,
+     "monthly": -28.029814814814625
+    },
+    {
+     "nursery": 1,
+     "pattern": 0,
+     "gross": 26000,
+     "pension_rate": 6.4,
+     "pension": 1664,
+     "tax": 2323.13,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 1786
+      }
+     ],
+     "ni": 1074.4,
+     "net": 20938.469999999998,
+     "days": 100.8,
+     "attended": 87.05,
+     "leave": 13.75,
+     "bank": 3.2,
+     "cost": 25855.199999999997,
+     "tfc": 5171.04,
+     "childcare_net": 20684.159999999996,
+     "lines": [
+      {
+       "eff": 95,
+       "per_day": 95,
+       "applied": false,
+       "cost": 9576,
+       "tfc": 1915.2
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 8139.599999999999,
+       "tfc": 1627.92
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 8139.599999999999,
+       "tfc": 1627.92
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": 254.3100000000013,
+     "monthly": 21.19250000000011
+    },
+    {
+     "nursery": 1,
+     "pattern": 1,
+     "gross": 39000,
+     "pension_rate": 8.7,
+     "pension": 3393,
+     "tax": 4658.400000000001,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 1702.47
+      }
+     ],
+     "ni": 2114.4,
+     "net": 28834.199999999997,
+     "days": 151.2,
+     "attended": 130.575,
+     "leave": 20.625,
+     "bank": 4.8,
+     "cost": 38782.799999999996,
+     "tfc": 6000,
+     "childcare_net": 32782.799999999996,
+     "lines": [
+      {
+       "eff": 95,
+       "per_day": 95,
+       "applied": false,
+       "cost": 14363.999999999998,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 12209.4,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 12209.4,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -3948.5999999999985,
+     "monthly": -329.0499999999999
+    },
+    {
+     "nursery": 1,
+     "pattern": 2,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 201.6,
+     "attended": 174.1,
+     "leave": 27.5,
+     "bank": 6.4,
+     "cost": 51710.399999999994,
+     "tfc": 6000,
+     "childcare_net": 45710.399999999994,
+     "lines": [
+      {
+       "eff": 95,
+       "per_day": 95,
+       "applied": false,
+       "cost": 19152,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 16279.199999999999,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 16279.199999999999,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -9988.939999999995,
+     "monthly": -832.4116666666663
+    },
+    {
+     "nursery": 1,
+     "pattern": 3,
+     "gross": 52000,
+     "pension_rate": 11.2,
+     "pension": 5824,
+     "tax": 7403.9400000000005,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2418.8
+      },
+      {
+       "label": "Intermediate",
+       "rate": 21,
+       "amount": 3395.91
+      },
+      {
+       "label": "Higher",
+       "rate": 42,
+       "amount": 1052.1
+      }
+     ],
+     "ni": 3050.6,
+     "net": 35721.46,
+     "days": 252,
+     "attended": 217.625,
+     "leave": 34.375,
+     "bank": 8,
+     "cost": 64638,
+     "tfc": 6000,
+     "childcare_net": 58638,
+     "lines": [
+      {
+       "eff": 95,
+       "per_day": 95,
+       "applied": false,
+       "cost": 23940,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 20349,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 20349,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -22916.54,
+     "monthly": -1909.7116666666668
+    },
+    {
+     "nursery": 1,
+     "pattern": 4,
+     "gross": 28888.88888888889,
+     "pension_rate": 7,
+     "pension": 2022.2222222222224,
+     "tax": 2829.263333333334,
+     "tax_split": [
+      {
+       "label": "Starter",
+       "rate": 19,
+       "amount": 537.13
+      },
+      {
+       "label": "Basic",
+       "rate": 20,
+       "amount": 2292.1333333333337
+      }
+     ],
+     "ni": 1305.5111111111112,
+     "net": 22731.892222222225,
+     "days": 126,
+     "attended": 108.8125,
+     "leave": 17.1875,
+     "bank": 4,
+     "cost": 32319,
+     "tfc": 6000,
+     "childcare_net": 26319,
+     "lines": [
+      {
+       "eff": 95,
+       "per_day": 95,
+       "applied": false,
+       "cost": 11970,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 10174.5,
+       "tfc": 2000
+      },
+      {
+       "eff": 80.75,
+       "per_day": 80.75,
+       "applied": true,
+       "cost": 10174.5,
+       "tfc": 2000
+      }
+     ],
+     "cb_gross": 3268.2,
+     "cb_net": 0,
+     "clawback": 100,
+     "annual": -3587.1077777777755,
+     "monthly": -298.92564814814796
+    }
+   ]
+  }
+ ]
+}

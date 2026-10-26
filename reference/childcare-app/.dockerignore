@@ -1,0 +1,7 @@
+data/
+*.zip
+.git
+.DS_Store
+README.md
+nginx.conf
+setup.sh

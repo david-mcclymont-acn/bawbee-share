@@ -1,0 +1,4 @@
+# Findings checked by hand and known not to be secrets. Each line is one finding's exact
+# fingerprint (commit:file:rule:line), so nothing else in that file is excused.
+
+# The old childcare calculator's storage key name is allowed inline (gitleaks:allow).

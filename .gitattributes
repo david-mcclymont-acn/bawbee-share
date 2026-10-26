@@ -1,0 +1,8 @@
+# Keep LF line endings so shell scripts and Docker files work when edited on Windows
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.xlsx binary
+*.zip binary

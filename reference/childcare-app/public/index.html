@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Childcare &amp; working pattern calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141d2e;--ink2:#3d4a61;--muted:#7b879b;--paper:#e9edf2;--card:#fff;--line:#d6dde6;--soft:#eef2f7;
+--gold:#9a6f1c;--gold-bg:#fbf3e0;--pos:#1a7f5a;--pos-bg:#e6f4ee;--neg:#b3422e;--neg-bg:#fceeea;--sel:#1f3a5f;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;color:var(--ink);background:var(--paper);padding:28px 20px 80px}
+.wrap{max-width:1120px;margin:0 auto}
+.mast{margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:44px;line-height:1.05;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--gold)}
+.dek{margin-top:10px;color:var(--ink2);max-width:60ch}
+section{margin-bottom:22px}
+.shead{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.shead h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:25px}
+.shead .hint{font-size:13px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+label{display:block;font-size:12px;font-weight:500;color:var(--ink2);margin-bottom:5px}
+label .sub{font-weight:400;color:var(--muted)}
+input[type=text],input[type=number],select{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font-size:14px}
+input[type=number]{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+input:focus,select:focus{outline:2px solid var(--sel);outline-offset:1px;border-color:var(--sel)}
+.chk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2)}
+.chk input{width:16px;height:16px;accent-color:var(--sel)}
+button{font-family:Inter,sans-serif;font-size:13px;font-weight:500;cursor:pointer;border-radius:7px;transition:background .12s,border-color .12s}
+button:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
+.btn{padding:8px 14px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.btn:hover{background:var(--soft);border-color:var(--muted)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn-dark{padding:8px 14px;border:1px solid var(--sel);background:var(--sel);color:#fff}
+.btn-dark:hover{background:#16293f}
+.btn-x{border:none;background:none;color:var(--muted);font-size:18px;line-height:1;padding:4px 7px;border-radius:6px}
+.btn-x:hover{background:var(--neg-bg);color:var(--neg)}
+.row-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+/* patterns */
+.pat{display:grid;grid-template-columns:auto 1fr 1fr auto auto;gap:12px;align-items:end;padding:11px 0;border-bottom:1px solid var(--soft)}
+.pat:last-child{border-bottom:none}
+.patdots{padding-bottom:9px}
+.patcalc{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);padding-bottom:10px;white-space:nowrap}
+/* nurseries */
+.nurseries{display:grid;gap:14px}
+.nurs{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.nurs-head{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
+.nurs-head input[type=text]{flex:1;font-weight:600}
+.nurs-head select{width:auto;flex:0 0 auto;font-size:13px;padding:7px 9px}
+.kidrow{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:12px;padding:12px 14px;border-bottom:1px solid var(--soft);align-items:end}
+.kidrow:last-child{border-bottom:none}
+.kidname{font-size:13px;font-weight:500;padding-bottom:9px}
+/* matrix */
+.matrix{width:100%;border-collapse:separate;border-spacing:0}
+.matrix th{font-size:12px;font-weight:500;color:var(--muted);padding:0 5px 10px 0;text-align:center}
+.matrix th.lead{text-align:left}
+.matrix th .hrs{font-family:"IBM Plex Mono",monospace;font-size:11px;display:block;color:var(--muted)}
+.matrix td{padding:0 5px 8px 0}
+.matrix td.lead{padding:0 14px 8px 0;vertical-align:middle}
+.mname{font-weight:600;font-size:14px}
+.msub{font-size:11.5px;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.cell{width:100%;display:block;text-align:left;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.cell:hover{border-color:var(--sel)}
+.cell.on{border-color:var(--sel);box-shadow:inset 0 0 0 1px var(--sel)}
+.cell.best{background:var(--pos-bg);border-color:#a9d8c4}
+.cell.best.on{box-shadow:inset 0 0 0 1px var(--pos)}
+.cell .amt{font-family:"IBM Plex Mono",monospace;font-size:17px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.cell.best .amt{color:var(--pos)}
+.cell .per{font-size:11px;color:var(--muted);font-family:"IBM Plex Mono",monospace;margin-top:2px}
+.cell .flag{font-size:10.5px;font-weight:500;color:var(--gold);margin-top:4px}
+.week{display:flex;gap:3px;margin-bottom:7px}
+th .week{justify-content:center;margin:0 0 4px}
+.dot{width:9px;height:9px;border-radius:2px;background:var(--line)}
+.dot.f{background:var(--sel)}
+.cell.best .dot.f{background:var(--pos)}
+/* detail */
+.detail{margin-top:16px;border-top:1px solid var(--line);padding-top:16px}
+.dtitle{font-family:"Instrument Serif",Georgia,serif;font-size:21px;margin-bottom:2px}
+.dsub{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+.dcols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.dh{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.line{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:13.5px;border-bottom:1px solid var(--soft)}
+.line:last-child{border-bottom:none}
+.line .lbl{color:var(--ink2)}
+.line .lbl small{display:block;color:var(--muted);font-size:11px}
+.line .val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+.line.tot{border-top:1px solid var(--ink);border-bottom:none;margin-top:4px;padding-top:8px;font-weight:600}
+.pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--muted)}
+/* compare strip */
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.seg button{padding:7px 12px;border:1px solid var(--line);background:#fff;color:var(--ink2)}
+.seg button:hover{background:var(--soft)}
+.seg button.on{background:var(--sel);border-color:var(--sel);color:#fff}
+.totals{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px}
+.tbox{background:var(--soft);border:1px solid var(--line);border-radius:9px;padding:11px 13px}
+.tbox.out{background:var(--neg-bg);border-color:#f0cfc6}
+.tbox.in{background:var(--pos-bg);border-color:#a9d8c4}
+.tbox .k{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.tbox .v{font-family:"IBM Plex Mono",monospace;font-size:17px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.tbox .y{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin-top:2px}
+.bar{height:9px;border-radius:99px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.barkey{display:flex;gap:16px;font-size:11.5px;color:var(--muted);margin-top:7px;flex-wrap:wrap}
+.barkey span{display:flex;align-items:center;gap:5px}
+.barkey i{width:9px;height:9px;border-radius:2px;display:inline-block}
+@media (max-width:900px){.tgrid{grid-template-columns:1fr 1fr}}
+.cmp{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.cmprow{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:6px 0;border-bottom:1px solid var(--soft)}
+.cmprow:last-child{border-bottom:none}
+.cmprow .val{font-family:"IBM Plex Mono",monospace;font-weight:500}
+details.adv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+details.adv>summary{padding:13px 18px;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--ink2);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.adv>summary::-webkit-details-marker{display:none}
+details.adv>summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--muted);font-size:16px}
+details.adv[open]>summary{border-bottom:1px solid var(--line)}
+details.adv[open]>summary::after{content:"\2013"}
+.advbody{padding:18px}
+.note{border-radius:8px;padding:11px 14px;font-size:13px;line-height:1.55}
+.note-gold{background:var(--gold-bg);border:1px solid #ecd9a8;color:#6d4e10}
+.note-mut{background:var(--soft);border:1px solid var(--line);color:var(--ink2)}
+.calib{font-size:13px;font-family:"IBM Plex Mono",monospace}
+.tiers{width:100%;border-collapse:collapse;font-size:13px;font-family:"IBM Plex Mono",monospace}
+.tiers td{padding:4px 8px;border-bottom:1px solid var(--soft)}
+.tiers td:last-child{text-align:right}
+.tiers tr.hit td{background:var(--gold-bg);color:var(--gold);font-weight:500}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.7}
+@media (max-width:900px){
+ body{padding:18px 14px 60px}h1{font-size:33px}
+ .g2,.g3,.g4{grid-template-columns:1fr 1fr}
+ .dcols{grid-template-columns:1fr;gap:18px}
+ .kidrow{grid-template-columns:1fr 1fr;gap:10px}
+ .pat{grid-template-columns:1fr 1fr;gap:10px}
+ .patdots,.patcalc{display:none}
+ .matrix,.matrix tbody,.matrix tr,.matrix td{display:block;width:100%}
+ .matrix thead{display:none}
+ .matrix tr{margin-bottom:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px}
+ .matrix td{padding:0 0 7px}.matrix td.lead{padding:0 0 9px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">Scotland &middot; NHS pension &middot; tax year 2026/27</div>
+  <h1>Pay follows hours.<br>Childcare follows <em>days</em>.</h1>
+  <p class="dek">Those are two different things, and that is the whole point. Working the same hours across five short days instead of four long ones earns exactly the same and costs a full extra day of nursery. Set out the patterns worth considering, enter each nursery's rates, and compare what is actually left.</p>
+</header>
+
+<section>
+  <div class="shead"><h2>Earnings</h2><span class="hint">the returning parent</span></div>
+  <div class="card">
+    <div class="grid g4">
+      <div><label for="i-salary">Annual gross salary <span class="sub">&pound;</span></label><input type="number" id="i-salary" value="48500" step="1"></div>
+      <div><label for="i-refhours">&hellip;for this many hours/week</label><input type="number" id="i-refhours" value="36" step="0.5" min="1"></div>
+      <div><label for="i-refdays">&hellip;worked over this many days</label><input type="number" id="i-refdays" value="4" step="0.5" min="0.5" max="7"></div>
+      <div><label for="i-bank">Bank holidays <span class="sub">days, full-time</span></label><input type="number" id="i-bank" value="10" step="1" min="0"></div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div><label for="i-leave">Annual leave <span class="sub">days, at the reference pattern above</span></label><input type="number" id="i-leave" value="27.5" step="0.5" min="0"></div>
+      <div><label for="i-actual">Payslip check <span class="sub">actual monthly take-home, optional</span></label><input type="number" id="i-actual" value="2875.40" step="0.01"></div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div><div class="note note-mut" id="leave-note"></div></div>
+      <div style="align-self:start"><div class="calib" id="calib"></div>
+        <button class="btn" id="btn-match" style="margin-top:9px;display:none" onclick="matchPayslip()">Match this exactly</button></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Working patterns</h2><span class="hint">hours set the pay, days set the childcare</span></div>
+  <div class="card"><div id="patterns"></div>
+    <div class="row-actions"><button class="btn" onclick="addPattern()">Add a pattern</button></div>
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>Nurseries</h2><span class="hint">charge by the day or by the hour</span></div>
+  <div class="nurseries" id="nurseries"></div>
+  <div class="row-actions">
+    <button class="btn-dark" onclick="addNursery()">Add a nursery</button>
+    <button class="btn" onclick="addChild()">Add a child</button>
+    <button class="btn" id="btn-rmkid" onclick="removeChild()">Remove a child</button>
+  </div>
+  <div class="note note-mut" style="margin-top:14px">
+    Charging <strong>by the day</strong> means a short day costs the same as a long one &mdash; the usual arrangement, and the reason spreading hours over more days hurts. Choose <strong>by the hour</strong> only if the nursery genuinely bills the hours used. A discount counts only when the pattern meets its minimum days; set minimum days to 0 if it always applies. Tick <strong>Bills leave days</strong> for a nursery that charges for your place whether the child attends or not &mdash; holidays then cost you twice. Untick <strong>Takes Tax-Free Childcare</strong> for a nursery that isn't signed up &mdash; the 20% top-up is then worth nothing there, which is often enough to cancel out a lower headline rate.
+  </div>
+</section>
+
+<section>
+  <div class="shead"><h2>What's left each month</h2><span class="hint">take-home + child benefit &minus; childcare &middot; tap any figure</span></div>
+  <div class="card">
+    <div class="seg" id="metricseg"></div>
+    <table class="matrix" id="matrix"></table>
+    <div class="detail" id="detail"></div>
+    <div class="totals" id="totals"></div>
+    <div class="cmp" id="cmp"></div>
+  </div>
+</section>
+
+<section>
+  <details class="adv"><summary>Household &amp; benefits</summary><div class="advbody">
+    <div class="grid g3">
+      <div><label for="i-partner">Higher earner's adjusted income <span class="sub">&pound;/yr, after salary sacrifice</span></label><input type="number" id="i-partner" value="72000" step="500"></div>
+      <div><label for="i-cb1">Child Benefit, eldest <span class="sub">&pound;/week</span></label><input type="number" id="i-cb1" value="27.05" step="0.05"></div>
+      <div><label for="i-cb2">Child Benefit, each other <span class="sub">&pound;/week</span></label><input type="number" id="i-cb2" value="17.90" step="0.05"></div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
+      <div><label for="i-tfc">Tax-Free Childcare cap <span class="sub">&pound;/child/yr</span></label><input type="number" id="i-tfc" value="2000" step="50"></div>
+      <div><label for="i-tfcrate">TFC top-up rate <span class="sub">%</span></label><input type="number" id="i-tfcrate" value="20" step="1"></div>
+      <div style="align-self:end"><div class="chk"><input type="checkbox" id="i-usecb" checked><label for="i-usecb" style="margin:0">Include Child Benefit</label></div></div>
+    </div>
+    <div class="note note-gold" id="hicbc-note" style="margin-top:14px"></div>
+  </div></details>
+</section>
+
+<section>
+  <details class="adv"><summary>Tax, National Insurance &amp; pension bands</summary><div class="advbody">
+    <div class="grid g4">
+      <div><label for="i-taxcode">Tax code <span class="sub">sets the allowance</span></label><input type="text" id="i-taxcode" value="S1257L"></div>
+      <div><label for="i-nilo">NI lower threshold <span class="sub">&pound;</span></label><input type="number" id="i-nilo" value="12570"></div>
+      <div><label for="i-nihi">NI upper threshold <span class="sub">&pound;</span></label><input type="number" id="i-nihi" value="50270"></div>
+      <div style="align-self:end"><div class="chk"><input type="checkbox" id="i-npa" checked><label for="i-npa" style="margin:0">Pension is net pay (pre-tax)</label></div></div>
+    </div>
+    <div class="grid g2" style="margin-top:20px">
+      <div><div class="dh">Scottish bands &mdash; taxable income above allowance</div><table class="tiers" id="taxtiers"></table>
+        <p class="msub" style="margin-top:8px">2026/27 thresholds are estimated from 2025/26. Use the payslip check to confirm.</p></div>
+      <div><div class="dh">NHS Scotland pension tiers &mdash; on actual annualised pay</div><table class="tiers" id="pentiers"></table>
+        <p class="msub" style="margin-top:8px">SPPA circular 2025/04. Part-time staff are tiered on actual pay, not whole-time equivalent, so cutting hours can cut the rate.</p></div>
+    </div>
+  </div></details>
+</section>
+
+<div class="row-actions">
+  <button class="btn" onclick="saveFile()">Download a copy</button>
+  <button class="btn" onclick="document.getElementById('loader').click()">Restore from file</button>
+  <input type="file" id="loader" accept=".json" style="display:none" onchange="loadFile(event)">
+  <button class="btn" onclick="window.print()">Print</button>
+  <button class="btn" onclick="resetAll()">Reset</button>
+  <span id="savestate" class="calib" style="align-self:center;color:var(--muted)"></span>
+</div>
+
+<footer>
+  Estimates for planning, not financial advice &mdash; check anything decisive against a payslip, the nursery, and HMRC.
+  Nursery days assume every working day is a booked day, less bank holidays and annual leave.
+  Tax-Free Childcare needs both parents working and earning above the minimum, reconfirmed every three months.
+  Funded early-learning hours (1,140 a year in Scotland) start at age three and are not modelled.
+</footer>
+</div>
+
+<script>
+let children = ["Twin A","Twin B"];
+let patterns = [
+  {days:2, hours:18},
+  {days:3, hours:27},
+  {days:4, hours:36},
+  {days:5, hours:36}
+];
+let nurseries = [
+  {name:"Little Acorns",     basis:"day", tfc:true, billsLeave:false, rates:[{rate:60,disc:0,min:0},{rate:54,disc:0,min:0}]},
+  {name:"Meadow House", basis:"day", tfc:true, billsLeave:false, rates:[{rate:79,disc:0,min:0},{rate:79,disc:10,min:4}]}
+];
+let selected = null;
+let metric = "left";
+const METRICS = [
+  {id:"left",  label:"Left over"},
+  {id:"net",   label:"Childcare cost"},
+  {id:"gross", label:"Before Tax-Free Childcare"},
+  {id:"share", label:"Share of take-home"}
+];
+
+const TAX_BANDS = [
+  {upTo:2827,rate:19,label:"Starter"},{upTo:14921,rate:20,label:"Basic"},
+  {upTo:31092,rate:21,label:"Intermediate"},{upTo:62430,rate:42,label:"Higher"},
+  {upTo:112570,rate:45,label:"Advanced"},{upTo:Infinity,rate:48,label:"Top"}
+];
+const PEN_TIERS = [
+  {upTo:13330,rate:5.7},{upTo:26762,rate:6.4},{upTo:31669,rate:7.0},
+  {upTo:39734,rate:8.7},{upTo:41669,rate:9.8},{upTo:50650,rate:10.5},
+  {upTo:54811,rate:11.2},{upTo:76652,rate:11.6},{upTo:Infinity,rate:12.7}
+];
+
+const $ = id => document.getElementById(id);
+const num = id => parseFloat($(id).value) || 0;
+const money = n => (n<0?"\u2212\u00a3":"\u00a3") + Math.abs(Math.round(n)).toLocaleString("en-GB");
+const money2 = n => "\u00a3" + n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const patLabel = p => p.days + " day" + (p.days===1?"":"s") + " \u00d7 " + p.hours + "h";
+
+function personalAllowance(){
+  const m = String($("i-taxcode").value).match(/(\d+)/);
+  return m ? parseInt(m[1],10)*10 + 9 : 12570;
+}
+function pensionRate(pay){ for(const t of PEN_TIERS) if(pay<=t.upTo) return t.rate; return 12.7; }
+function incomeTax(ti){
+  let pa = personalAllowance();
+  if (ti > 100000) pa = Math.max(0, pa - (ti-100000)/2);
+  let t = Math.max(0, ti-pa), prev = 0, tax = 0, split = [];
+  for (const b of TAX_BANDS){
+    const inBand = Math.max(0, Math.min(t,b.upTo) - prev);
+    if (inBand>0){ tax += inBand*b.rate/100; split.push({label:b.label,rate:b.rate,amount:inBand*b.rate/100}); }
+    prev = b.upTo; if (t<=b.upTo) break;
+  }
+  return {tax, split};
+}
+function nationalInsurance(g){
+  const lo=num("i-nilo"), hi=num("i-nihi");
+  return Math.max(0,Math.min(g,hi)-lo)*0.08 + Math.max(0,g-hi)*0.02;
+}
+function earnings(hours){
+  const gross = num("i-salary") * hours / (num("i-refhours")||1);
+  const pRate = pensionRate(gross), pension = gross*pRate/100;
+  const taxable = $("i-npa").checked ? gross-pension : gross;
+  const {tax,split} = incomeTax(taxable);
+  const ni = nationalInsurance(gross);
+  return {gross,pRate,pension,tax,taxSplit:split,ni,net:gross-pension-tax-ni};
+}
+/* Leave entitlement pro-rates by hours, but the number of nursery days it
+   covers works out as simply days-off scaled by days worked. */
+function leaveDaysFor(days){ return num("i-leave") * days / (num("i-refdays")||1); }
+
+function dayCounts(days){
+  const booked = days*52;
+  const bank   = num("i-bank") * days/5;
+  const leave  = leaveDaysFor(days);
+  return {booked, bank, leave, attended: booked - bank - leave, openBooked: booked - bank};
+}
+
+function childBenefit(){
+  if (!$("i-usecb").checked || !children.length) return {gross:0,net:0,clawback:0};
+  const gross = (num("i-cb1") + num("i-cb2")*(children.length-1)) * 52;
+  const pct = Math.min(100, Math.max(0, (num("i-partner")-60000)/200));
+  return {gross, net: gross*(1-pct/100), clawback: pct};
+}
+function nurseryCost(nurs, p){
+  const dc = dayCounts(p.days), cap = num("i-tfc"), tfcRate = num("i-tfcrate")/100;
+  const billsLeave = nurs.billsLeave === true;
+  const nd = billsLeave ? dc.openBooked : dc.attended;
+  const hoursPerDay = p.days ? p.hours/p.days : 0;
+  const takesTfc = nurs.tfc !== false;
+  const lines = nurs.rates.map((r,i)=>{
+    const applied = r.disc>0 && p.days>=r.min;
+    const eff = r.rate * (applied ? 1-r.disc/100 : 1);
+    const perDay = nurs.basis==="hour" ? eff*hoursPerDay : eff;
+    const cost = nd*perDay;
+    return {name:children[i]||("Child "+(i+1)), rate:r.rate, eff, perDay, applied, disc:r.disc, cost,
+            tfc: takesTfc ? Math.min(cost*tfcRate,cap) : 0};
+  });
+  const cost = lines.reduce((s,l)=>s+l.cost,0), tfc = lines.reduce((s,l)=>s+l.tfc,0);
+  return {days:nd, dc, billsLeave, hoursPerDay, takesTfc, lines, cost, tfc, net:cost-tfc};
+}
+function scenario(nurs,p){
+  const e=earnings(p.hours), n=nurseryCost(nurs,p), cb=childBenefit();
+  const annual = e.net + cb.net - n.net;
+  return {p,e,n,cb,annual,monthly:annual/12};
+}
+
+function weekDots(d){
+  let h='<span class="week" aria-hidden="true">';
+  for(let i=1;i<=5;i++) h+='<span class="dot'+(i<=d?" f":"")+'"></span>';
+  return h+"</span>";
+}
+
+function renderPatterns(){
+  $("patterns").innerHTML = patterns.map((p,i)=>{
+    const e = earnings(p.hours);
+    return '<div class="pat">'
+      + '<div class="patdots">'+weekDots(p.days)+'</div>'
+      + '<div><label for="pd-'+i+'">Days a week</label><input type="number" id="pd-'+i+'" value="'+p.days+'" step="0.5" min="0.5" max="7" oninput="patterns['+i+'].days=parseFloat(this.value)||1;selected=null;refresh()"></div>'
+      + '<div><label for="ph-'+i+'">Hours a week</label><input type="number" id="ph-'+i+'" value="'+p.hours+'" step="0.5" min="1" oninput="patterns['+i+'].hours=parseFloat(this.value)||1;selected=null;refresh()"></div>'
+      + '<div class="patcalc">'+money(e.gross)+' \u00b7 '+(p.days?(p.hours/p.days).toFixed(1):"0")+'h days</div>'
+      + '<div>'+(patterns.length>1?'<button class="btn-x" title="Remove pattern" onclick="patterns.splice('+i+',1);selected=null;renderPatterns();refresh()">\u00d7</button>':'')+'</div>'
+      + '</div>';
+  }).join("");
+}
+
+function renderNurseries(){
+  $("btn-rmkid").disabled = children.length<=1;
+  $("nurseries").innerHTML = nurseries.map((n,ni)=>
+    '<div class="nurs"><div class="nurs-head">'
+    + '<input type="text" value="'+esc(n.name)+'" aria-label="Nursery name" oninput="nurseries['+ni+'].name=this.value;refresh()">'
+    + '<select aria-label="Charging basis" onchange="nurseries['+ni+'].basis=this.value;refresh()">'
+    + '<option value="day"'+(n.basis==="day"?" selected":"")+'>Charges by the day</option>'
+    + '<option value="hour"'+(n.basis==="hour"?" selected":"")+'>Charges by the hour</option></select>'
+    + '<div class="chk" style="flex:0 0 auto;white-space:nowrap">'
+    + '<input type="checkbox" id="tfc-'+ni+'"'+(n.tfc!==false?" checked":"")+' onchange="nurseries['+ni+'].tfc=this.checked;refresh()">'
+    + '<label for="tfc-'+ni+'" style="margin:0">Takes Tax-Free Childcare</label></div>'
+    + '<div class="chk" style="flex:0 0 auto;white-space:nowrap">'
+    + '<input type="checkbox" id="bl-'+ni+'"'+(n.billsLeave===true?" checked":"")+' onchange="nurseries['+ni+'].billsLeave=this.checked;refresh()">'
+    + '<label for="bl-'+ni+'" style="margin:0">Bills leave days</label></div>'
+    + (nurseries.length>1?'<button class="btn-x" title="Remove nursery" onclick="nurseries.splice('+ni+',1);selected=null;renderNurseries();refresh()">\u00d7</button>':'')
+    + '</div>'
+    + n.rates.map((r,ci)=>
+        '<div class="kidrow"><div class="kidname">'+esc(children[ci]||("Child "+(ci+1)))+'</div>'
+        + '<div><label for="r-'+ni+'-'+ci+'">Rate <span class="sub">\u00a3 per '+(n.basis==="hour"?"hour":"day")+'</span></label>'
+        + '<input type="number" id="r-'+ni+'-'+ci+'" value="'+r.rate+'" step="0.5" min="0" oninput="nurseries['+ni+'].rates['+ci+'].rate=parseFloat(this.value)||0;refresh()"></div>'
+        + '<div><label for="d-'+ni+'-'+ci+'">Discount <span class="sub">%</span></label>'
+        + '<input type="number" id="d-'+ni+'-'+ci+'" value="'+r.disc+'" step="1" min="0" max="100" oninput="nurseries['+ni+'].rates['+ci+'].disc=parseFloat(this.value)||0;refresh()"></div>'
+        + '<div><label for="m-'+ni+'-'+ci+'">Min days <span class="sub">for discount</span></label>'
+        + '<input type="number" id="m-'+ni+'-'+ci+'" value="'+r.min+'" step="1" min="0" max="7" oninput="nurseries['+ni+'].rates['+ci+'].min=parseFloat(this.value)||0;refresh()"></div></div>'
+      ).join("")
+    + '</div>').join("");
+}
+
+function renderSeg(){
+  $("metricseg").innerHTML = METRICS.map(m=>
+    '<button class="'+(metric===m.id?"on":"")+'" onclick="metric=\''+m.id+'\';refresh()">'+m.label+'</button>').join("");
+}
+
+function cellFigures(s){
+  const m = v => money(v/12);
+  if (metric==="net")   return {big:m(s.n.net),   sub:money(s.n.net)+"/yr"};
+  if (metric==="gross") return {big:m(s.n.cost),  sub:s.n.tfc>0 ? money(s.n.tfc/12)+"/mo back" : "no TFC here"};
+  if (metric==="share") return {big:(s.e.net>0 ? (s.n.net/s.e.net*100).toFixed(0) : "0")+"%",
+                                sub:m(s.n.net)+" of "+m(s.e.net)};
+  return {big:money(s.monthly), sub:money(s.annual)+"/yr"};
+}
+
+function renderMatrix(){
+  const all=[];
+  nurseries.forEach((n,ni)=>patterns.forEach((p,pi)=>all.push({ni,pi,s:scenario(n,p)})));
+  if(!all.length){ $("matrix").innerHTML=""; $("detail").innerHTML=""; $("cmp").innerHTML=""; return; }
+  const best = Math.max(...all.map(x=>x.s.monthly));
+  if(!selected || !nurseries[selected.ni] || !patterns[selected.pi]){
+    const b = all.find(x=>Math.abs(x.s.monthly-best)<0.01); selected={ni:b.ni,pi:b.pi};
+  }
+  let h = "<thead><tr><th class='lead'>&nbsp;</th>";
+  patterns.forEach(p=>h+="<th>"+weekDots(p.days)+p.days+" days<span class='hrs'>"+p.hours+"h</span></th>");
+  h += "</tr></thead><tbody>";
+  nurseries.forEach((n,ni)=>{
+    h += '<tr><td class="lead"><div class="mname">'+esc(n.name)+'</div><div class="msub">'
+       + n.rates.map(r=>"\u00a3"+r.rate).join(" + ")+"/"+(n.basis==="hour"?"hr":"day")
+       + (n.tfc===false?'<br><span style="color:var(--neg)">no Tax-Free Childcare</span>':"")
+       + (n.billsLeave===true?'<br><span style="color:var(--neg)">bills leave days</span>':"")+'</div></td>';
+    patterns.forEach((p,pi)=>{
+      const s = scenario(n,p);
+      const isBest = Math.abs(s.monthly-best)<0.01;
+      const on = selected.ni===ni && selected.pi===pi;
+      const disc = s.n.lines.some(l=>l.applied);
+      const fig = cellFigures(s);
+      h += '<td><button class="cell'+(isBest?" best":"")+(on?" on":"")+'" onclick="selected={ni:'+ni+',pi:'+pi+'};refresh()">'
+         + weekDots(p.days)
+         + '<div class="amt">'+fig.big+'</div><div class="per">'+fig.sub+'</div>'
+         + (disc?'<div class="flag">discount applied</div>':(isBest?'<div class="flag">best left over</div>':""))
+         + '</button></td>';
+    });
+    h += "</tr>";
+  });
+  $("matrix").innerHTML = h+"</tbody>";
+}
+
+function renderDetail(){
+  const n = nurseries[selected.ni], p = patterns[selected.pi], s = scenario(n,p);
+  const e=s.e, nc=s.n, cb=s.cb, per = v => money(v/12);
+  const taxRows = e.taxSplit.map(b=>'<div class="line"><span class="lbl">'+b.label+' rate <small>'+b.rate+'%</small></span><span class="val neg">\u2212'+per(b.amount)+'</span></div>').join("");
+  const kidRows = nc.lines.map(l=>
+    '<div class="line"><span class="lbl">'+esc(l.name)+'<small>'
+    + (l.applied ? "\u00a3"+l.rate+" less "+l.disc+"% = \u00a3"+l.eff.toFixed(2) : "\u00a3"+l.rate)
+    + (n.basis==="hour" ? "/hr \u00d7 "+nc.hoursPerDay.toFixed(1)+"h = \u00a3"+l.perDay.toFixed(2)+"/day" : "/day")
+    + " \u00d7 "+nc.days.toFixed(0)+(nc.billsLeave?" billed":" attended")+' days</small></span><span class="val neg">\u2212'+per(l.cost)+'</span></div>'
+    + (nc.takesTfc
+        ? '<div class="line"><span class="lbl mut" style="padding-left:12px">Tax-Free Childcare'+(l.tfc>=num("i-tfc")-0.5?" (capped)":"")+'</span><span class="val pos">+'+per(l.tfc)+'</span></div>'
+        : '<div class="line"><span class="lbl mut" style="padding-left:12px">Tax-Free Childcare <small>not accepted here \u2014 '
+          + money(Math.min(l.cost*num("i-tfcrate")/100,num("i-tfc"))/12)+'/mo forgone</small></span><span class="val mut">\u00a30</span></div>')
+  ).join("");
+  $("detail").innerHTML =
+    '<div class="dtitle">'+esc(n.name)+' \u00b7 '+patLabel(p)+'</div>'
+    + '<div class="dsub">'+nc.dc.attended.toFixed(0)+' days attended'
+    + (nc.billsLeave ? ', <span style="color:var(--neg)">'+nc.days.toFixed(0)+' billed</span>' : '')
+    + ' \u00b7 '+nc.hoursPerDay.toFixed(1)+' hours a day \u00b7 '
+    + nc.dc.leave.toFixed(1)+' days leave, '+nc.dc.bank.toFixed(1)+' bank holidays</div>'
+    + '<div class="dcols"><div><div class="dh">Pay</div>'
+    + '<div class="line"><span class="lbl">Gross salary <small>'+p.hours+'h of '+num("i-refhours")+'h</small></span><span class="val">'+per(e.gross)+'</span></div>'
+    + '<div class="line"><span class="lbl">NHS pension <small>tier '+e.pRate+'% on '+money(e.gross)+'</small></span><span class="val neg">\u2212'+per(e.pension)+'</span></div>'
+    + taxRows
+    + '<div class="line"><span class="lbl">National Insurance <small>on full gross</small></span><span class="val neg">\u2212'+per(e.ni)+'</span></div>'
+    + '<div class="line tot"><span class="lbl">Take-home</span><span class="val">'+per(e.net)+'</span></div></div>'
+    + '<div><div class="dh">Childcare'+(cb.net>0?" &amp; benefits":"")+'</div>'+kidRows
+    + (cb.gross>0?'<div class="line"><span class="lbl">Child Benefit'+(cb.clawback>0?'<small>'+(cb.clawback>=100?"fully clawed back":cb.clawback.toFixed(0)+"% clawed back")+'</small>':"")+'</span><span class="val '+(cb.net>0?"pos":"mut")+'">'+(cb.net>0?"+"+per(cb.net):"\u00a30")+'</span></div>':"")
+    + '<div class="line tot"><span class="lbl">Left over each month</span><span class="val '+(s.monthly>=0?"pos":"neg")+'">'+per(s.annual)+'</span></div></div></div>';
+}
+
+function renderTotals(){
+  const n = nurseries[selected.ni], p = patterns[selected.pi], s = scenario(n,p);
+  const e=s.e, nc=s.n, cb=s.cb;
+  const grossPay = e.gross, deductions = e.pension+e.tax+e.ni;
+  const out = nc.net, left = s.annual;
+  const share = e.net>0 ? nc.net/e.net*100 : 0;
+  const w = v => Math.max(0, v/grossPay*100);
+  const leaveWaste = nc.billsLeave
+    ? nc.lines.reduce((t,l)=>t + l.perDay*nc.dc.leave, 0) : 0;
+
+  $("totals").innerHTML =
+    '<div class="dh">Where the money goes \u2014 '+esc(n.name)+', '+patLabel(p)+'</div>'
+  + '<div class="tgrid">'
+  +   '<div class="tbox"><div class="k">Gross pay</div><div class="v">'+money(grossPay/12)+'</div><div class="y">'+money(grossPay)+'/yr</div></div>'
+  +   '<div class="tbox out"><div class="k">Tax, NI &amp; pension</div><div class="v">'+money(deductions/12)+'</div><div class="y">'+money(deductions)+'/yr</div></div>'
+  +   '<div class="tbox out"><div class="k">Childcare after TFC</div><div class="v">'+money(out/12)+'</div><div class="y">'+money(out)+'/yr</div></div>'
+  +   '<div class="tbox in"><div class="k">Left over</div><div class="v">'+money(left/12)+'</div><div class="y">'+money(left)+'/yr</div></div>'
+  + '</div>'
+  + '<div class="bar">'
+  +   '<i style="width:'+w(deductions)+'%;background:#b3422e"></i>'
+  +   '<i style="width:'+w(out)+'%;background:#d08a3e"></i>'
+  +   '<i style="width:'+w(Math.max(0,left-cb.net))+'%;background:#1a7f5a"></i>'
+  + '</div>'
+  + '<div class="barkey">'
+  +   '<span><i style="background:#b3422e"></i>Tax, NI &amp; pension</span>'
+  +   '<span><i style="background:#d08a3e"></i>Childcare</span>'
+  +   '<span><i style="background:#1a7f5a"></i>Left over</span>'
+  +   '<span>Childcare takes '+share.toFixed(0)+'% of take-home</span>'
+  + '</div>'
+  + '<div class="tgrid" style="margin-top:14px">'
+  +   '<div class="tbox"><div class="k">Childcare before TFC</div><div class="v">'+money(nc.cost/12)+'</div><div class="y">'+money(nc.cost)+'/yr</div></div>'
+  +   '<div class="tbox"><div class="k">Tax-Free Childcare</div><div class="v">'+(nc.tfc>0?money(nc.tfc/12):"\u00a30")+'</div><div class="y">'+(nc.takesTfc?money(nc.tfc)+"/yr":"not accepted here")+'</div></div>'
+  +   '<div class="tbox"><div class="k">Days billed</div><div class="v">'+nc.days.toFixed(0)+'</div><div class="y">'+nc.dc.attended.toFixed(0)+' attended</div></div>'
+  +   '<div class="tbox'+(leaveWaste>0?" out":"")+'"><div class="k">Paid for, not used</div><div class="v">'+(leaveWaste>0?money(leaveWaste/12):"\u00a30")+'</div><div class="y">'+(leaveWaste>0?money(leaveWaste)+"/yr on leave days":"leave not billed")+'</div></div>'
+  + '</div>';
+}
+
+function renderCompare(){
+  const n = nurseries[selected.ni], p = patterns[selected.pi], base = scenario(n,p);
+  const others = patterns.map((q,qi)=>({qi,q,s:scenario(n,q)})).filter(x=>x.qi!==selected.pi);
+  if(!others.length){ $("cmp").innerHTML=""; return; }
+  $("cmp").innerHTML = '<div class="dh">'+esc(n.name)+' \u2014 against '+patLabel(p)+'</div>'
+    + others.map(o=>{
+        const d = o.s.monthly - base.monthly;
+        const samePay = Math.abs(o.q.hours-p.hours) < 0.01;
+        return '<div class="cmprow"><span>'+patLabel(o.q)
+          + (samePay?' <span class="mut">\u00b7 same pay</span>':"")
+          + '</span><span class="val '+(d>=0?"pos":"neg")+'">'+(d>=0?"+":"")+money(d)+'/mo</span></div>';
+      }).join("");
+}
+
+function renderTiers(){
+  const p = patterns[selected.pi] || patterns[0];
+  const e = earnings(p ? p.hours : num("i-refhours"));
+  const taxable = $("i-npa").checked ? e.gross-e.pension : e.gross;
+  let above = Math.max(0, taxable - personalAllowance()), prev = 0;
+  $("taxtiers").innerHTML = TAX_BANDS.map(b=>{
+    const hit = above > prev;
+    const row = '<tr class="'+(hit?"hit":"")+'"><td>'+b.label+'</td><td>'+(prev===0?"first":"to")+" "+(b.upTo===Infinity?"above":"\u00a3"+b.upTo.toLocaleString("en-GB"))+'</td><td>'+b.rate+'%</td></tr>';
+    prev = b.upTo; return row;
+  }).join("");
+  $("pentiers").innerHTML = PEN_TIERS.map((t,i)=>{
+    const lo = i===0?0:PEN_TIERS[i-1].upTo;
+    const hit = e.gross>lo && e.gross<=t.upTo;
+    return '<tr class="'+(hit?"hit":"")+'"><td>'+(t.upTo===Infinity?"\u00a3"+lo.toLocaleString("en-GB")+" and above":"to \u00a3"+t.upTo.toLocaleString("en-GB"))+'</td><td>'+t.rate+'%</td></tr>';
+  }).join("");
+}
+
+function renderLeaveNote(){
+  const el=$("leave-note"); if(!el) return;
+  const rows = patterns.map(p=>p.days+"d: "+leaveDaysFor(p.days).toFixed(1)).join(" \u00b7 ");
+  el.innerHTML = "Leave is entered for the reference pattern and pro-rated to each one \u2014 "
+    + num("i-leave")+" days at "+num("i-refdays")+" days a week becomes "+rows+". "
+    + "Enter the figure your employer actually quotes for the pattern above.";
+}
+
+function renderChecks(){
+  const actual = num("i-actual"), c = $("calib"), btn = $("btn-match");
+  if(!actual){ c.innerHTML=""; btn.style.display="none"; }
+  else {
+    const calc = earnings(num("i-refhours")).net/12, diff = calc-actual, ok = Math.abs(diff)<15;
+    c.innerHTML = '<span class="'+(ok?"pos":"neg")+'">'+(ok?"\u2713":"!")+'</span> calculated '+money2(calc)+' \u00b7 '
+      + (ok?"matches payslip":"out by "+money2(Math.abs(diff))+(diff>0?" too high":" too low"));
+    btn.style.display = ok?"none":"inline-block";
+  }
+  const cb = childBenefit();
+  $("hicbc-note").innerHTML = cb.clawback>=100
+    ? "At "+money(num("i-partner"))+" the high-income charge claws back all Child Benefit, so it adds nothing above. Keep claiming anyway \u2014 the National Insurance credits protect State Pension entitlement."
+    : cb.clawback>0
+      ? "At "+money(num("i-partner"))+" the charge claws back "+cb.clawback.toFixed(0)+"%, leaving "+money(cb.net/12)+" a month. Repay through self assessment rather than opting out."
+      : "Below the \u00a360,000 threshold, so Child Benefit is kept in full \u2014 "+money(cb.net/12)+" a month.";
+}
+
+function matchPayslip(){
+  const target = num("i-actual")*12, h = num("i-refhours")||1;
+  if(!target) return;
+  let lo=1000, hi=400000;
+  for(let i=0;i<80;i++){
+    const mid=(lo+hi)/2;
+    $("i-salary").value = mid.toFixed(0);
+    (earnings(h).net < target) ? lo=mid : hi=mid;
+  }
+  $("i-salary").value = Math.round((lo+hi)/2);
+  refresh();
+}
+
+function refresh(){ renderSeg(); renderLeaveNote(); renderPatterns(); renderMatrix(); renderDetail(); renderTotals(); renderCompare(); renderTiers(); renderChecks(); scheduleSave(); }
+
+function addPattern(){
+  const last = patterns[patterns.length-1] || {days:4,hours:36};
+  patterns.push({days:Math.min(5,last.days+1), hours:last.hours});
+  selected=null; renderPatterns(); refresh();
+}
+function addNursery(){
+  nurseries.push({name:"New nursery", basis:"day", tfc:true, billsLeave:false, rates:children.map(()=>({rate:70,disc:0,min:0}))});
+  renderNurseries(); refresh();
+}
+function addChild(){
+  children.push("Child "+(children.length+1));
+  nurseries.forEach(n=>n.rates.push({rate:70,disc:0,min:0}));
+  renderNurseries(); refresh();
+}
+function removeChild(){
+  if(children.length<=1) return;
+  children.pop(); nurseries.forEach(n=>n.rates.pop());
+  renderNurseries(); refresh();
+}
+/* ============================================================
+   Persistence
+   Server-backed when /api/state answers, otherwise this browser.
+   ============================================================ */
+const STORE_KEY = "childcare-calculator-v2"; // a storage key name, not a secret: gitleaks:allow
+let storeMode = "memory", saveTimer = null, booting = true;
+
+function serialise(){
+  const cfg = {children,patterns,nurseries,fields:{}};
+  document.querySelectorAll("input[id^='i-']").forEach(el=>cfg.fields[el.id]=el.type==="checkbox"?el.checked:el.value);
+  return cfg;
+}
+function applyConfig(cfg){
+  if(!cfg || typeof cfg!=="object") return false;
+  if(Array.isArray(cfg.children) && cfg.children.length) children = cfg.children;
+  if(Array.isArray(cfg.patterns) && cfg.patterns.length) patterns = cfg.patterns;
+  if(Array.isArray(cfg.nurseries) && cfg.nurseries.length)
+    nurseries = cfg.nurseries.map(n=>({tfc:true, basis:"day", billsLeave:false, ...n}));
+  if(cfg.fields) Object.entries(cfg.fields).forEach(([k,v])=>{
+    const el=$(k); if(!el) return;
+    if(el.type==="checkbox") el.checked=v; else el.value=v;
+  });
+  selected = null;
+  return true;
+}
+function setStatus(msg,tone){
+  const el=$("savestate"); if(!el) return;
+  el.textContent = msg;
+  el.style.color = tone==="bad" ? "var(--neg)" : tone==="good" ? "var(--pos)" : "var(--muted)";
+}
+function storeLabel(){
+  return storeMode==="server" ? "Saved on the server"
+       : storeMode==="local"  ? "Saved in this browser"
+       : "Not saved \u2014 download a copy";
+}
+
+async function initStore(){
+  try{
+    const res = await fetch("api/state",{headers:{Accept:"application/json"}});
+    if(res.ok){
+      const ct = res.headers.get("content-type")||"";
+      if(ct.includes("json")){
+        storeMode = "server";
+        const data = await res.json();
+        if(data && Object.keys(data).length) applyConfig(data);
+        setStatus(storeLabel()); return;
+      }
+    }
+  }catch{/* no backend, fall through */}
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    localStorage.setItem(STORE_KEY+"-probe","1");
+    localStorage.removeItem(STORE_KEY+"-probe");
+    storeMode = "local";
+    if(raw) applyConfig(JSON.parse(raw));
+  }catch{ storeMode = "memory"; }
+  setStatus(storeLabel());
+}
+
+async function persist(){
+  const cfg = serialise();
+  if(storeMode==="server"){
+    try{
+      const res = await fetch("api/state",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(cfg)});
+      setStatus(res.ok ? storeLabel() : "Server rejected the save","bad");
+    }catch{ setStatus("Server unreachable \u2014 changes not saved","bad"); }
+  } else if(storeMode==="local"){
+    try{ localStorage.setItem(STORE_KEY,JSON.stringify(cfg)); setStatus(storeLabel()); }
+    catch{ storeMode="memory"; setStatus(storeLabel(),"bad"); }
+  } else setStatus(storeLabel());
+}
+function scheduleSave(){
+  if(booting) return;
+  clearTimeout(saveTimer);
+  setStatus("Saving\u2026");
+  saveTimer = setTimeout(persist,600);
+}
+
+function resetAll(){
+  if(!confirm("Clear the saved setup and start from the defaults?")) return;
+  try{ localStorage.removeItem(STORE_KEY); }catch{}
+  if(storeMode==="server") fetch("api/state",{method:"DELETE"}).catch(()=>{});
+  location.reload();
+}
+function saveFile(){
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(serialise(),null,2)],{type:"application/json"}));
+  a.download="childcare-setup.json"; a.click(); URL.revokeObjectURL(a.href);
+}
+function loadFile(ev){
+  const f=ev.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      applyConfig(JSON.parse(r.result));
+      renderNurseries(); refresh(); persist();
+    }catch{ alert("That file isn't a saved setup \u2014 pick the JSON file this page created."); }
+  };
+  r.readAsText(f); ev.target.value="";
+}
+
+document.querySelectorAll("input[id^='i-']").forEach(el=>
+  el.addEventListener(el.type==="checkbox"?"change":"input", refresh));
+
+(async function boot(){
+  await initStore();
+  booting = false;
+  renderNurseries();
+  refresh();
+})();
+</script>
+</body>
+</html>

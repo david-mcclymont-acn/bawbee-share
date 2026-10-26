@@ -1,0 +1,131 @@
+{
+  "title": "Choose the visual world for A Wee Bawbee",
+  "question": "The roll dealt the Landranger sheet. Keep it, take an alternate, or re-roll. This world carries every screen after the placeholder: payday, inbox, budget, forecast.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Landranger Sheet",
+      "kicker": "THE ROLL",
+      "lineage": "Ordnance Survey Landranger maps and the hillwalker's route profile",
+      "thesis": "The household month as an OS sheet: every bill has a grid reference by day, and the joint balance is walked as a route profile.",
+      "palette": ["#c8166f", "#16202a", "#f6f8f6", "#2f80c0", "#a65a24", "#4f8a3a"],
+      "materials": ["matt map paper", "blue grid hairlines", "conventional-sign legend", "contour sienna"],
+      "viewport": "A Landranger-magenta rail holds the bawbee mark and nav. The main sheet has day eastings 1–31 in its margin, the joint balance drawn as an elevation profile (paydays as climbs, bills as drops, the zero line as sea level), and the payday checklist beneath.",
+      "risk": "Contours and grid can tip into wallpaper if they decorate instead of carrying data. OS is a British tradition, so it reads Scottish through the hillwalking ritual rather than overtly.",
+      "raised": [
+        { "from": "challenger-split-flap", "raise": "Lines keep fixed column positions on every screen (Day · Line · Account · Out · In), strictly in day order; columns never move, only values change." },
+        { "from": "challenger-j-card", "raise": "Each salary hub shows its outgoings as a length against take-home, with the surplus right-aligned tight to the margin: a side must never overflow the tape." },
+        { "from": "challenger-crouwel", "raise": "Spacing snaps to one grid-square unit, and the grid is a real armature that aligns figures, not a background texture." },
+        { "from": "challenger-doujin", "raise": "Every budget line deep-links between its row and its position on the month grid." },
+        { "from": "challenger-labanotation", "raise": "In household summaries Person 1 and Person 2 mirror either side of Joint; neither is ranked above the other." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Scottish Banknote",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Bank of Scotland, Clydesdale and RBS notes",
+      "thesis": "Money set like Scottish notes: each account wears its denomination colour, and figures are engraved with intaglio precision.",
+      "palette": ["#26507d", "#8a4b2a", "#3e6b3a", "#5a3d72", "#eceee8", "#14181c"],
+      "materials": ["guilloche line work", "intaglio rules", "security-print microtext"],
+      "viewport": "Three account columns headed in their note colours with fine guilloche bands. Payday transfers are note-coloured rows, and the £5 ceilings are shown as a denomination step.",
+      "risk": "Familiar: currency styling is the obvious money move, and guilloche turns into costume quickly. The £20 violet sits near the purple you've ruled out."
+    },
+    {
+      "id": "challenger-botanical-folio",
+      "label": "Botanical Folio",
+      "verdict": "competitive",
+      "lineage": "seasonal botanical plates at one fixed scale",
+      "thesis": "Each budget version is a plate of the same plant at a different stage of life, always drawn at the same scale.",
+      "palette": ["#f1ebdc", "#6b4f3a", "#4e7a3a", "#b8322a", "#1e1a17"],
+      "materials": ["engraved plate", "sepia hairlines", "small-caps stage labels"],
+      "viewport": "The versions screen as aligned plates (Maternity, Back to work, Back to normal) on one baseline, with surplus and balances at an identical scale.",
+      "case": "Fuses well for comparing life-stage versions at a fixed scale, and holds on product clarity there. It loses on identification, because its cream-and-serif world is the default 'warm' look.",
+      "risk": "Cream plates with italic serif names are the most common AI rendering of 'warm and trustworthy'.",
+      "hero": "https://impeccable.style/worlds/cards/editorial-sequence-montage-botanical-folio-season-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/editorial-sequence-montage-botanical-folio-season.webp"
+    },
+    {
+      "id": "challenger-split-flap",
+      "label": "Split-flap Concourse",
+      "verdict": "declined",
+      "lineage": "rail concourse departure boards",
+      "thesis": "Payday transfers as departures: rows ranked by time on a board whose columns never move.",
+      "palette": ["#121314", "#f2f2ee", "#e3a21a", "#9a2a22", "#8d9196"],
+      "materials": ["matte flaps", "brushed steel", "amber row lamps"],
+      "viewport": "A board of transfers and bills ordered by due day, flipping as the bank confirms them.",
+      "case": "The payday checklist fits, but a departure board is a display interface rather than this household's world, and it would read as a costume on the budget and forecast screens.",
+      "kept": "Fixed columns ordered strictly by time.",
+      "risk": "Reads as a novelty transit display.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp"
+    },
+    {
+      "id": "challenger-j-card",
+      "label": "Mixtape J-card",
+      "verdict": "declined",
+      "lineage": "hand-ruled cassette inlays",
+      "thesis": "Two sides, one for each person, each of which must fit the tape.",
+      "palette": ["#f7f7f2", "#1f3f9a", "#8f949a", "#c4262e"],
+      "materials": ["lined inlay stock", "ballpoint"],
+      "viewport": "Side A (Person 1) and Side B (Person 2) with running totals right-aligned against take-home.",
+      "case": "The capacity constraint maps to surplus, but nostalgia isn't money and handwriting fights exact figures.",
+      "kept": "Outgoings measured against a fixed capacity.",
+      "risk": "Handwritten figures undermine trust.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-cassette-j-card-hero.webp"
+    },
+    {
+      "id": "challenger-crouwel",
+      "label": "Crouwel Grid Specimen",
+      "verdict": "declined",
+      "lineage": "Wim Crouwel's gridded type posters",
+      "thesis": "Figures built on a visible construction grid.",
+      "palette": ["#ffffff", "#9cc3e6", "#111111", "#e4002b"],
+      "materials": ["graph-paper grid", "grotesk"],
+      "viewport": "Monumental grid-built totals over a small neutral table.",
+      "case": "A poster grammar, so it loses on both identification and the clarity of a working screen.",
+      "kept": "The grid as a real armature.",
+      "risk": "Poster, not product.",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp"
+    },
+    {
+      "id": "challenger-doujin",
+      "label": "Circle Catalog",
+      "verdict": "declined",
+      "lineage": "convention catalogs on newsprint",
+      "thesis": "Every line a stamp-sized cell keyed to a map position.",
+      "palette": ["#e9e7e0", "#151515", "#2a7fd4"],
+      "materials": ["newsprint", "single ink"],
+      "viewport": "A packed grid of line cells keyed to the month map.",
+      "case": "Too foreign to this household and too dense for figures.",
+      "kept": "Deep links between a cell and its map position.",
+      "risk": "Unreadable money.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-doujin-event-catalog-hero.webp"
+    },
+    {
+      "id": "challenger-labanotation",
+      "label": "Labanotation Score",
+      "verdict": "declined",
+      "lineage": "dance notation staves",
+      "thesis": "The household as a mirrored score: Person 1 left, Person 2 right, Joint on the centre staff.",
+      "palette": ["#ffffff", "#111111", "#d9d9d9"],
+      "materials": ["score paper", "hatched blocks"],
+      "viewport": "A centre staff of joint bills, flanked by each person's flows.",
+      "case": "The symmetry is apt, but the notation is obscure and it dictates layout, which the world may not do.",
+      "kept": "Person 1 and Person 2 mirrored around Joint.",
+      "risk": "Nobody here reads dance notation.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-labanotation-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A clean modern budgeting app, done impeccably.",
+    "palette": ["#ffffff", "#0f172a", "#64748b", "#0d9488"],
+    "materials": ["rounded panels", "neutral sans", "soft shadows"],
+    "viewport": "A top bar, then summary panels for surplus, payday and inbox, then a chart.",
+    "risk": "Indistinguishable from every budgeting app, which PRODUCT.md explicitly rules out."
+  },
+  "steer": true
+}

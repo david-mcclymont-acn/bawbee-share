@@ -1,0 +1,82 @@
+{
+  "tax_year": "2026-27",
+  "starts": "2026-04-06",
+  "ends": "2027-04-05",
+  "region": "scotland",
+  "checked_on": "2026-10-23",
+  "personal_allowance": "12570",
+  "allowance_taper": {
+    "threshold": "100000",
+    "ratio": "2",
+    "source": "GOV.UK, Income Tax rates and allowances for current and previous tax years: https://www.gov.uk/government/publications/rates-and-allowances-income-tax/income-tax-rates-and-allowances-current-and-past"
+  },
+  "scottish_bands": [
+    { "label": "Starter", "rate": "19", "up_to": "3967" },
+    { "label": "Basic", "rate": "20", "up_to": "16956" },
+    { "label": "Intermediate", "rate": "21", "up_to": "31092" },
+    { "label": "Higher", "rate": "42", "up_to": "62430" },
+    { "label": "Advanced", "rate": "45", "up_to": "125140" },
+    { "label": "Top", "rate": "48", "up_to": null }
+  ],
+  "scottish_bands_note": "Amounts of taxable income above the personal allowance (gross: starter £12,571-£16,537, basic to £29,526, intermediate to £43,662, higher to £75,000, advanced to £125,140). Agreed by the Scottish Parliament on 19 February 2026 (motion S6M-20844).",
+  "scottish_bands_source": "GOV.UK, Rates and thresholds for employers 2026 to 2027: https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027; gov.scot, Scottish Income Tax rates and bands 2026 to 2027: https://www.gov.scot/publications/scottish-income-tax-rates-and-bands/pages/2026-to-2027/; Scottish Parliament motion S6M-20844: https://www.parliament.scot/chamber-and-committees/votes-and-motions/S6M-20844",
+  "national_insurance": {
+    "primary_threshold": "12570",
+    "upper_earnings_limit": "50270",
+    "main_rate": "8",
+    "upper_rate": "2",
+    "source": "GOV.UK, Rates and thresholds for employers 2026 to 2027 (Class 1, category A): https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027"
+  },
+  "nhs_scotland_pension_tiers": [
+    { "up_to": "13330", "rate": "5.7" },
+    { "up_to": "28987", "rate": "6.4" },
+    { "up_to": "34302", "rate": "7.0" },
+    { "up_to": "43038", "rate": "8.7" },
+    { "up_to": "45134", "rate": "9.8" },
+    { "up_to": "54862", "rate": "10.5" },
+    { "up_to": "59369", "rate": "11.2" },
+    { "up_to": "83026", "rate": "11.6" },
+    { "up_to": null, "rate": "12.7" }
+  ],
+  "nhs_scotland_pension_tiers_continuing": [
+    { "up_to": "13330", "rate": "5.7" },
+    { "up_to": "27940", "rate": "6.4" },
+    { "up_to": "33062", "rate": "7.0" },
+    { "up_to": "41482", "rate": "8.7" },
+    { "up_to": "43502", "rate": "9.8" },
+    { "up_to": "52879", "rate": "10.5" },
+    { "up_to": "57223", "rate": "11.2" },
+    { "up_to": "80025", "rate": "11.6" },
+    { "up_to": null, "rate": "12.7" }
+  ],
+  "nhs_scotland_pension_note": "Tiers are on actual pensionable pay, not whole-time equivalent. 'tiers' is Table 2 (new starters and in-year pay changes, on current annualised pay); 'continuing' is Table 1 (members tiered on 2025/26 pay). Employers apply these under Circular 2026/03; the amending regulations are expected in force from 9 December 2026, backdated to 1 April 2026.",
+  "nhs_scotland_pension_source": "SPPA NHS Circular 2026/03, Employee contribution tier bandings from 1 April 2026: https://pensions.gov.scot/sites/default/files/2026-03/2026_03_-_NHS_Employee_contribution_tier_bandings_from_1_April_2026.pdf",
+  "child_benefit": {
+    "first_weekly": "27.05",
+    "other_weekly": "17.90",
+    "source": "GOV.UK, Child Benefit rates: https://www.gov.uk/child-benefit-rates"
+  },
+  "high_income_child_benefit_charge": {
+    "threshold": "60000",
+    "step": "200",
+    "note": "1% of Child Benefit repaid for every £200 of adjusted net income over £60,000; all of it from £80,000.",
+    "source": "GOV.UK, High Income Child Benefit Charge: https://www.gov.uk/child-benefit-tax-charge"
+  },
+  "tax_free_childcare": {
+    "rate": "20",
+    "cap_per_child": "2000",
+    "income_limit": "100000",
+    "note": "The government adds £2 for every £8 paid in, up to £500 a quarter (£2,000 a year) per child. Each parent must expect to earn at least £2,643.68 over the next 3 months (21 and over).",
+    "source": "GOV.UK, Tax-Free Childcare: https://www.gov.uk/tax-free-childcare and https://www.gov.uk/tax-free-childcare/check-if-youre-eligible"
+  },
+  "funded_childcare": {
+    "hours_per_year": "1140",
+    "start_after_third_birthday": [
+      { "birth_months": [3, 4, 5, 6, 7, 8], "starts_month": 8, "term": "autumn" },
+      { "birth_months": [9, 10, 11, 12], "starts_month": 1, "term": "spring" },
+      { "birth_months": [1, 2], "starts_month": 4, "term": "summer" }
+    ],
+    "note": "From the term after the third birthday until school. Councils set the actual term dates (August, January, March or April); the month here is the usual one. Some 2-year-olds qualify too (certain benefits, or care experience), from the same windows.",
+    "source": "mygov.scot, Funded early learning and childcare: https://www.mygov.scot/childcare-costs-help/funded-early-learning-and-childcare; SSI 2014/196 art. 1: https://www.legislation.gov.uk/ssi/2014/196/article/1"
+  }
+}
